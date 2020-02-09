@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+
+    <script type="module">
+        import latexjs from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.component.esm.js"
+        customElements.define('latex-js', latexjs)
+    </script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <title>LaTeX Pages</title>
+</head>
+
+<body>
+    <div id="main" class="main">
+
+        <div id="fileSubmitForm" class="submitForm">
+            <form action="onSubmit">
+                <input type="text">
+                <input type="file" accept=".tex" name="file" id="file" class="urlInput" onchange='openFile(event)'>
+            </form>
+            <div id="latexDiv">
+                
+            </div>
+            <!-- <latex-js id="latex" baseURL="https://cdn.jsdelivr.net/npm/latex.js@0.11.1/dist/" >
+            </latex-js> -->
+
+        </div>
+
+    </div>
+
+
+
+    <latex-js hyphenate="false">
+        Another.
+    </latex-js> 
+
+</body>
+
+</html>
