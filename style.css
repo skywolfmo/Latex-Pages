@@ -4,7 +4,7 @@
 }
 latex-js {
     display: inline-block;
-    width: 40%;
+    width: 100%;
     border: 1px solid red;
     margin-right: 2em;
 }
