@@ -23,9 +23,9 @@ function failValidation(msg) {
         var text = reader.result;
         var main = document.getElementById('main');
         var latexDiv = document.getElementById('latexDiv');
-        latexDiv.innerHTML = "<latex-js id=\"latex\" baseURL=\"https://cdn.jsdelivr.net/npm/latex.js@0.11.1/dist/\" ></latex-js>";
-        var latex = document.getElementById('latex');
-        latex.innerText = text;
+        latexDiv.innerHTML = "<latex-js id=\"latex\" baseURL=\"https://cdn.jsdelivr.net/npm/latex.js@0.11.1/dist/\" >"+text+"</latex-js>";
+        // var latex = document.getElementById('latex');
+        // latex.innerText = text;
         console.log(reader.result.substring(0,300));
     };
     reader.readAsText(input.files[0]);
